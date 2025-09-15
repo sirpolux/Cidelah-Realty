@@ -1,0 +1,86 @@
+import { Phone, Mail, MapPin, Instagram, Facebook, Send } from "lucide-react"; 
+// Note: Send icon will represent Telegram
+
+export default function Footer() {
+  return (
+    <footer className="bg-gray-900 text-gray-300">
+      <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
+        
+        {/* Logo + Motto */}
+        <div>
+          <img src="/img/logo.png" alt="Cidelah Realty Logo" className="h-12 mb-4" />
+          <p className="text-sm text-gray-400">
+            Reliable construction, Delivered on time.
+          </p>
+        </div>
+
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+          <ul className="space-y-2">
+            <li><a href="#home" className="hover:text-yellow-400">Home</a></li>
+            <li><a href="#about" className="hover:text-yellow-400">About</a></li>
+            <li><a href="#projects" className="hover:text-yellow-400">Projects</a></li>
+            <li><a href="#contact" className="hover:text-yellow-400">Contact</a></li>
+          </ul>
+        </div>
+
+        {/* Contact Info */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
+          <ul className="space-y-3">
+            <li className="flex items-center gap-2">
+              <Phone size={16} /> 
+              <span>08063000001, 08142177183</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail size={16} /> 
+              <span>cidelahrealty@gmail.com</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <MapPin size={16} /> 
+              <span>20 Akinmade Street, Lekki 1, Lagos, Nigeria</span>
+            </li>
+          </ul>
+        </div>
+
+        {/* Socials */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
+          <div className="flex gap-4">
+            {/* Instagram */}
+            <a 
+              href="https://instagram.com/cidelahrealty" 
+              target="_blank" 
+              className="p-2 rounded-full bg-gray-800 hover:bg-yellow-500 transition"
+            >
+              <Instagram size={18} />
+            </a>
+            {/* Facebook */}
+            <a 
+              href="https://facebook.com/cidelahrealty" 
+              target="_blank" 
+              className="p-2 rounded-full bg-gray-800 hover:bg-yellow-500 transition"
+            >
+              <Facebook size={18} />
+            </a>
+            {/* Telegram */}
+            <a 
+              href="https://t.me/cidelahrealty" 
+              target="_blank" 
+              className="p-2 rounded-full bg-gray-800 hover:bg-yellow-500 transition"
+            >
+              <Send size={18} />
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-700 mt-10 py-4 text-center text-sm text-gray-400">
+        © {new Date().getFullYear()} Cidelah Realty. All rights reserved.
+      </div>
+    </footer>
+  );
+}
