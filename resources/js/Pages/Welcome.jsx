@@ -6,8 +6,10 @@ import { motion } from "framer-motion";
 // Replace placeholder images with real images supplied (Datcha Homes etc.)
 
 import heroImage from "../../../public/img/hero_2.png";
+
 import Navbar from "@/Layouts/NavBar";
 import Footer from "@/Layouts/Footer";
+import Layout from "./Layout";
 
 //import heroImage from '../../../public/img/logo_small.png';
 
@@ -21,11 +23,9 @@ export default function Welcome({
     ],
 }) {
     return (
-        <div className="w-full">
-            <Navbar/>
-
         
-        <main className="min-h-screen bg-gray-50 text-gray-900 antialiased">
+        <Layout>
+  <main className="min-h-screen bg-gray-50 text-gray-900 antialiased">
             {/* HERO */}
             <section className="relative">
                 {/* Background Image */}
@@ -280,7 +280,9 @@ export default function Welcome({
 
             {/* NOTE: Menu and Footer intentionally omitted as requested. */}
         </main>
-        <Footer/>
-        </div>
+        </Layout>
+      
+      
+
     );
 }
