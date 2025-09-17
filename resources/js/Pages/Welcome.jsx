@@ -84,7 +84,10 @@ export default function Welcome({
                                     href="#projects"
                                     className="inline-flex items-center gap-3 rounded-xl bg-primary px-5 py-3 text-white text-sm font-medium shadow-lg"
                                 >
+                                    <Link href={route('projects')}>
                                     View Featured Project
+                                    </Link>
+                                  
                                 </motion.a>
 
                                 <motion.a

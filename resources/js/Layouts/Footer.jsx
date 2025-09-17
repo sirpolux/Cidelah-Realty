@@ -1,7 +1,8 @@
-import { Phone, Mail, MapPin, Instagram, Facebook, Send } from "lucide-react"; 
+import { Phone, Mail, MapPin, Instagram, Facebook, Send, Twitter } from "lucide-react"; 
 // Note: Send icon will represent Telegram
 
 import logo from "../../../public/img/logo_512x512.png";
+import { Link } from "@inertiajs/react";
 
 export default function Footer() {
   return (
@@ -20,10 +21,10 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            <li><a href="#home" className="hover:text-yellow-400">Home</a></li>
-            <li><a href="#about" className="hover:text-yellow-400">About</a></li>
-            <li><a href="#projects" className="hover:text-yellow-400">Projects</a></li>
-            <li><a href="#contact" className="hover:text-yellow-400">Contact</a></li>
+            <li><Link href="/" className="hover:text-yellow-400 cursor-pointer">Home</Link></li>
+            <li><Link href={route('about')} className="hover:text-yellow-400">About</Link></li>
+            <li><Link href={route('projects')} className="hover:text-yellow-400">Projects</Link></li>
+            <li><Link href={route('contact')}   className="hover:text-yellow-400">Contact</Link></li>
           </ul>
         </div>
 
@@ -52,7 +53,7 @@ export default function Footer() {
           <div className="flex gap-4">
             {/* Instagram */}
             <a 
-              href="https://instagram.com/cidelahrealty" 
+              href="https://www.instagram.com/cidelahreality?igsh=MWttb3JwYmJ4OGVxbw==" 
               target="_blank" 
               className="p-2 rounded-full bg-gray-800 hover:bg-yellow-500 transition"
             >
@@ -60,7 +61,7 @@ export default function Footer() {
             </a>
             {/* Facebook */}
             <a 
-              href="https://facebook.com/cidelahrealty" 
+              href="https://www.fb.com/l/6lp1kJRRR" 
               target="_blank" 
               className="p-2 rounded-full bg-gray-800 hover:bg-yellow-500 transition"
             >
@@ -68,11 +69,11 @@ export default function Footer() {
             </a>
             {/* Telegram */}
             <a 
-              href="https://t.me/cidelahrealty" 
+              href="https://x.com/Cidelah_Realty" 
               target="_blank" 
               className="p-2 rounded-full bg-gray-800 hover:bg-yellow-500 transition"
             >
-              <Send size={18} />
+              <Twitter size={18} />
             </a>
           </div>
         </div>

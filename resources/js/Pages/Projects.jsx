@@ -8,9 +8,12 @@ import featuredImage2 from "../../../public/img/featured2.png";
 import featuredImage3 from "../../../public/img/featured3.png";
 
 
+
+
 import orange1 from "../../../public/img/orange_1.png";
-import orange2 from "../../../public/img/orange_2.png";
+import orange2 from "../../../public/img/orange5.png";
 import orange3 from "../../../public/img/orange_3.png";
+import orange4 from "../../../public/img/orange4.png";
 
 import Layout from "./Layout";
 
@@ -32,9 +35,9 @@ const dummyProjects = [
     id: 2,
     name: "Orange Island Project",
     images: [
-        { name: "Front View", src: orange1},
-        { name: "Living Room", src: orange2},
-        { name: "Kitchen", src: orange3},
+        { name: "Front View", src: orange4},
+        { name: "Living Room", src: orange3},
+        { name: "Kitchen", src: orange2},
     ],
     description:
       "A proposed luxury development on Orange Island. Details to be provided soon.",
