@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Instagram, Facebook, Send, Twitter } from "lucide-react"; 
+import { FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 // Note: Send icon will represent Telegram
 
 import logo from "../../../public/img/logo_512x512.png";
@@ -22,9 +23,9 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li><Link href="/" className="hover:text-yellow-400 cursor-pointer">Home</Link></li>
-            <li><Link href={route('about')} className="hover:text-yellow-400">About</Link></li>
-            <li><Link href={route('projects')} className="hover:text-yellow-400">Projects</Link></li>
-            <li><Link href={route('contact')}   className="hover:text-yellow-400">Contact</Link></li>
+            <li><Link href={route('about')} className="hover:text-primary">About</Link></li>
+            <li><Link href={route('projects')} className="hover:text-primary">Projects</Link></li>
+            <li><Link href={route('contact')}   className="hover:text-primary">Contact</Link></li>
           </ul>
         </div>
 
@@ -55,7 +56,7 @@ export default function Footer() {
             <a 
               href="https://www.instagram.com/cidelahreality?igsh=MWttb3JwYmJ4OGVxbw==" 
               target="_blank" 
-              className="p-2 rounded-full bg-gray-800 hover:bg-yellow-500 transition"
+              className="p-2 rounded-full bg-gray-800 hover:bg-primary transition"
             >
               <Instagram size={18} />
             </a>
@@ -63,7 +64,7 @@ export default function Footer() {
             <a 
               href="https://www.fb.com/l/6lp1kJRRR" 
               target="_blank" 
-              className="p-2 rounded-full bg-gray-800 hover:bg-yellow-500 transition"
+              className="p-2 rounded-full bg-gray-800 hover:bg-primary transition"
             >
               <Facebook size={18} />
             </a>
@@ -71,10 +72,24 @@ export default function Footer() {
             <a 
               href="https://x.com/Cidelah_Realty" 
               target="_blank" 
-              className="p-2 rounded-full bg-gray-800 hover:bg-yellow-500 transition"
+              className="p-2 rounded-full bg-gray-800 hover:bg-primary transition"
             >
-              <Twitter size={18} />
-            </a>
+              <FaXTwitter />
+            </a>  
+            
+            <a 
+              href="https://wa.me/2348142177183" 
+              target="_blank" 
+              className="p-2 rounded-full bg-gray-800 hover:bg-primary transition"
+            >
+              <FaWhatsapp />
+            </a>  
+            {/* <Smartphone className="mx-auto" size={32} />
+          <h2 className="font-bold uppercase">WhatsApp</h2>
+          <p>Mon–Fri 9AM–5PM</p>
+          <a href="https://wa.me/2349014705204" target="_blank" className="underline">Message Us</a> */}
+
+            
           </div>
         </div>
 
