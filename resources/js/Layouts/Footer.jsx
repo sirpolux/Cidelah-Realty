@@ -1,6 +1,8 @@
 import { Phone, Mail, MapPin, Instagram, Facebook, Send } from "lucide-react"; 
 // Note: Send icon will represent Telegram
 
+import logo from "../../../public/img/logo_512x512.png";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -8,7 +10,7 @@ export default function Footer() {
         
         {/* Logo + Motto */}
         <div>
-          <img src="/img/logo.png" alt="Cidelah Realty Logo" className="h-12 mb-4" />
+          <img src={logo}  alt="Cidelah Realty Logo" className="h-12 mb-4" />
           <p className="text-sm text-gray-400">
             Reliable construction, Delivered on time.
           </p>

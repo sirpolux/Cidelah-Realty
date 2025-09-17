@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -27,9 +28,7 @@ Route::get('/contact', function(){
     return inertia('Contact');
 })->name('contact');
 
-Route::get('/projects', function(){
-    return inertia('Project');
-})->name('projects');
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

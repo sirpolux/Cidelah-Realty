@@ -2,6 +2,8 @@ import { Phone, Mail, MapPin, Clock, Instagram, Facebook, Send, MessageCircle } 
 import { motion } from "framer-motion";
 import { Link } from "@inertiajs/react";
 import Layout from "./Layout";
+import contact_us from "../../../public/img/contact_us2.jpg";
+
 
 export default function Contact() {
   return (
@@ -17,7 +19,7 @@ export default function Contact() {
           className="w-full"
         >
           <img
-            src="/img/contact-person.jpg" // ✅ Replace with real image
+            src={contact_us}  // ✅ Replace with real image
             alt="Contact Person"
             className="rounded-2xl shadow-lg object-cover w-full h-[400px]"
           />

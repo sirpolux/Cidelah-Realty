@@ -30,28 +30,28 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-6">
           <Link
             href="/"
-            className="flex items-center gap-2 text-gray-700 hover:text-yellow-600 transition"
+            className="flex items-center gap-2 text-gray-700 hover:text-primary transition"
           >
             <Home size={18} /> Home
           </Link>
 
           <Link
             href={route("about")}
-            className="flex items-center gap-2 text-gray-700 hover:text-yellow-600 transition"
+            className="flex items-center gap-2 text-gray-700 hover:text-primary transition"
           >
             <Info size={18} /> About
           </Link>
 
           <Link
             href={route("contact")}
-            className="flex items-center gap-2 text-gray-700 hover:text-yellow-600 transition"
+            className="flex items-center gap-2 text-gray-700 hover:text-primary transition"
           >
             <Phone size={18} /> Contact
           </Link>
 
           <Link
             href={route("projects")}
-            className="flex items-center gap-2 rounded-lg bg-yellow-500 px-4 py-2 text-white font-medium shadow hover:bg-yellow-600 transition"
+            className="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-white font-medium shadow hover:bg-secondary transition"
           >
             <Building2 size={18} /> Projects
           </Link>

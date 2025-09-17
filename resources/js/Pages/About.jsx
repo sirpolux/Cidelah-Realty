@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Layout from "./Layout";
+import md from "../../../public/img/MD_construction.jpg";
 
 export default function About() {
     return (
@@ -7,20 +8,20 @@ export default function About() {
             <section className="bg-white text-gray-800">
 
                 {/* Hero */}
-                <div className="relative h-[50vh] w-full">
-                    <img
+                <div className="relative h-[35vh] w-full">
+                    {/* <img
                         src="/img/about-hero.jpg"
                         alt="About Cidelah Realty"
                         className="absolute inset-0 w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                    /> */}
+                    <div className="absolute inset-0 bg-gray-900 flex items-center justify-center">
                         <motion.h1
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7 }}
                             className="text-4xl md:text-5xl font-bold text-white"
                         >
-                            About Cidelah Realty
+                            <span className="px-6 md:px-12 md:text-5xl">About Cidelah Realty</span>
                         </motion.h1>
                     </div>
                 </div>
@@ -63,7 +64,7 @@ export default function About() {
                         {/* Example team member */}
                         <div className="bg-white shadow-lg rounded-xl overflow-hidden text-center p-6 hover:shadow-xl transition">
                             <img
-                                src="/img/team-abdulrazak.jpg"
+                                src={md}
                                 alt="Abdulrazak Ibrahim"
                                 className="w-28 h-28 mx-auto rounded-full object-cover mb-4"
                             />
