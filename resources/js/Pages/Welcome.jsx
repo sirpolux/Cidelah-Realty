@@ -17,28 +17,32 @@ import featuredImage3 from "../../../public/img/featured3.png";
 import Navbar from "@/Layouts/NavBar";
 import Footer from "@/Layouts/Footer";
 import Layout from "./Layout";
-import { Link } from "@inertiajs/react";
-
-//import heroImage from '../../../public/img/logo_small.png';
+import { Link, useForm } from "@inertiajs/react";
 
 
-export default function Welcome({
-    //heroImage = "/img/hero_2.png",
+
+export default function Welcome(
+    {
     featuredImages = [
         featuredImage1,
         featuredImage2,
         featuredImage3,
-    ],
-}) {
+    ],}) {
+
+        const {data,setData, post, processing, errors, reset} = useForm({   
+            "name":"",
+            "title":"",
+            "sender_email":"",
+            "message":""
+        });
+
     return (
 
         <Layout>
             <main className="min-h-screen bg-gray-50 text-gray-900 antialiased">
                 {/* HERO */}
                 <section className="relative">
-                    {/* Background Image */}
                     <img
-                        // src="https://migrationpolicycentre.eu/wp-content/uploads/2020/06/school-closures-during-covi19-pandemic.png"
                         src={heroImage}
                         alt="Cidelah Realty - hero"
                         className="object-cover h-[85vh] md:h-[100vh] w-full"
@@ -85,9 +89,9 @@ export default function Welcome({
                                     className="inline-flex items-center gap-3 rounded-xl bg-primary px-5 py-3 text-white text-sm font-medium shadow-lg"
                                 >
                                     <Link href={route('projects')}>
-                                    View Featured Project
+                                        View Featured Project
                                     </Link>
-                                  
+
                                 </motion.a>
 
                                 <motion.a
@@ -96,9 +100,9 @@ export default function Welcome({
                                     href="#contact"
                                 >
                                     <Link href={route('contact')}>
-                                    Contact Us
+                                        Contact Us
                                     </Link>
-                                    
+
                                 </motion.a>
                             </div>
                         </div>
