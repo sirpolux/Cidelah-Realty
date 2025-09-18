@@ -36,6 +36,8 @@ export default function Welcome(
             "message":""
         });
 
+        console.log(data);
+
     return (
 
         <Layout>
@@ -277,14 +279,25 @@ export default function Welcome(
                                     <input
                                         className="w-full rounded-md border px-3 py-2"
                                         placeholder="Your name"
+                                        value={data.name}
+                                        onChange={(e)=>setData('name', e.target.value)}
+                                        required
                                     />
                                     <input
                                         className="w-full rounded-md border px-3 py-2"
-                                        placeholder="Email or phone"
+                                        placeholder="Email"
+                                        value={data.sender_email}
+                                        onChange={(e)=>setData('sender_email', e.target.value)}
+                                        required
+                                    />
+                                      <input
+                                        className="w-full rounded-md border px-3 py-2"
+                                        placeholder="Contact Number"
                                     />
                                     <textarea
                                         className="w-full rounded-md border px-3 py-2"
                                         placeholder="Brief project description"
+                                        required
                                         rows={4}
                                     />
                                     <button className="rounded-md bg-gray-900 px-4 py-2 text-white">
