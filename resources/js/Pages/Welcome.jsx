@@ -33,10 +33,22 @@ export default function Welcome(
             "name":"",
             "title":"",
             "sender_email":"",
-            "message":""
+            "message":"",
+            "contact_no":""
         });
 
         console.log(data);
+
+        const handleSubmit=(e)=>{
+            e.preventDefault();
+            post(route('send-mail'),
+            {
+                onSuccess:()=>{
+
+                }
+            });
+
+        }
 
     return (
 
@@ -275,7 +287,14 @@ export default function Welcome(
                                 transition={{ delay: 0.12 }}
                                 className="rounded-xl border p-6"
                             >
-                                <form className="grid gap-3">
+                                <form className="grid gap-3" onSubmit={handleSubmit}>
+                                <input
+                                        className="w-full rounded-md border px-3 py-2 font-semibold"
+                                        placeholder="Title"
+                                        value={data.title}
+                                        onChange={(e)=>setData('title', e.target.value)}
+                                        required
+                                    />
                                     <input
                                         className="w-full rounded-md border px-3 py-2"
                                         placeholder="Your name"
@@ -290,19 +309,29 @@ export default function Welcome(
                                         onChange={(e)=>setData('sender_email', e.target.value)}
                                         required
                                     />
+
+
                                       <input
                                         className="w-full rounded-md border px-3 py-2"
                                         placeholder="Contact Number"
+                                        value={data.contact_no}
+                                        onChange={(e)=>setData('contact_no', e.target.value)}
                                     />
                                     <textarea
                                         className="w-full rounded-md border px-3 py-2"
                                         placeholder="Brief project description"
+                                        value={data.message}
+                                        onChange={(e)=>setData('message', e.target.value)}
                                         required
                                         rows={4}
                                     />
-                                    <button className="rounded-md bg-gray-900 px-4 py-2 text-white">
-                                        Send enquiry
+                                    <button className="rounded-md bg-gray-900 px-4 py-2 text-white"
+                                     disabled={processing}
+                                     type="submit"
+                                    >
+                                        {processing ? "Sending Enquiry..." : "Send Enquiry"}
                                     </button>
+
                                 </form>
                             </motion.div>
                         </div>

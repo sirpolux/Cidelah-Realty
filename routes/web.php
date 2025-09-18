@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SupportController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -14,6 +15,14 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
+Route::get('/mail_test', [SupportController::class, 'mailTest'])->name('mail');
+
+Route::post('/send-message', [SupportController::class, 'sendMail'])->name('send-mail');
+
+Route::get('/mail-response', function(){
+    return inertia('ContactResponse');
+})->name('mail-response');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
